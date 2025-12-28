@@ -9,8 +9,15 @@ const Login = () => {
 
   return (
     <div>
-        <input type="email" placeholder="enter your email" value={email} onChange={(e)=>setEmail(e.target.value)} />
-         <input type="password" placeholder="enter your password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+        <input type="email" placeholder="enter your email" email={email} onChange={(e)=>setEmail(e.target.value)} />
+         <input type="password" placeholder="enter your password" password={password} onChange={(e)=>setPassword(e.target.value)} />
+         <button type='submit'>Login</button>
+         if(email===validUsername && password===validPassword){
+            alert("successs")
+         }
+         else{
+            alert(" wrong email or password")
+         }
       
     </div>
   )
