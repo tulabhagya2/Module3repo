@@ -1,4 +1,5 @@
 import React from 'react'
+import CardDisplay from './CardDisplay';
 
 const Admin = () => {
     const[cards,setCards]=useState();
@@ -57,7 +58,17 @@ const Admin = () => {
     </div>
     <div>
         {cards.map(card=>(
-            <Restuarant
+            <li key={card.id}>
+                <li>{formData.restuarantId}</li>
+                <li>{formData.restuarantName}</li>
+                <li>{formData.address}</li>
+                <li>{formData.type}</li>
+                <li>{formData.selectone}</li>
+            
+            <button onchange={updateData}>Update</button>
+            <button onChange={deleteData}>Delete</button>
+            
+            </li>
 
         ))}
     </div>
